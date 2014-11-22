@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: baomoi_production
-  username: baomoi
-  password: <%= ENV['BAOMOI_DATABASE_PASSWORD'] %>
