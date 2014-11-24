@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user#taotaikhoan'
+  resources :post
+  root 'post#index'
   get 'user/taotaikhoan'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

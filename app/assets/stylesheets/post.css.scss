@@ -1,3 +1,199 @@
 // Place all the styles related to the post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,700);
+
+body {
+  background-color: #ecf0f1;
+  color: #34495e;
+  font-family:'Open Sans', sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin:0;
+}
+
+#main{
+  width:100%;
+  margin: 0 auto;
+}
+
+header{
+  margin:0 auto;
+  margin-top:20px;
+  margin-bottom: 45px;
+}
+
+#logo{
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.logolink {
+   display:inline;
+   color: #3498db;
+   text-decoration: none;
+   font-size: 45px;
+   font-family:'Open Sans', sans-serif, Arial, Helvetica, sans-serif;   
+}
+
+.logolink2 {
+   display:inline;
+   color: #e0392b;
+   text-decoration: none;
+   font-size: 45px;
+   font-family:'Open Sans', sans-serif, Arial, Helvetica, sans-serif;   
+}
+
+section{
+  width:1000px;
+  margin: 0 auto;
+}
+
+
+h1,h2,h3,h4{
+  margin:0;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  margin:0;
+}
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+article{
+
+  width: 740px;
+  margin:0 auto;
+  padding:15px;
+  float:left;
+  -webkit-box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+  -moz-box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+  box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+}
+
+.minipost{
+    width: 340px;
+	margin:20px;
+	padding:10px;
+	float:left;
+	-webkit-box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+    -moz-box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+    box-shadow: 0px 1px 8px 1px rgba(204,202,204,1);
+}
+
+
+.postmenu{
+	width:100%;
+    float: left;
+    padding:0;
+    list-style-type: none;	
+    margin-top: 15px;
+}
+
+.postmenu li{
+    display:inline;	
+}
+
+.postmenu li a{   
+   color: #3498db;
+   text-decoration: none;
+   margin-right:15px;   
+}
+
+.postmenu li a:hover{
+   color:#e74c3c;	
+}
+
+.postmenu li a:visited{	
+}
+
+.button {
+   color: #34495e;
+   font-size:15px;
+   font-weight: bold;
+   text-decoration: none;
+   font-family:'Open Sans', sans-serif, Arial, Helvetica, sans-serif;      	
+}
+
+.button:hover{
+   color:#e74c3c;	
+}
+
+.date{
+	text-align: right;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}

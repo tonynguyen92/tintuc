@@ -42,3 +42,4 @@ gem 'devise'
 gem 'rails_admin'
 gem 'nokogiri'
 gem 'whenever', :require => false
+gem 'rufus-scheduler'

@@ -18,11 +18,11 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 1.minutes do
-  # command "/usr/bin/some_great_command"
-  # runner "MyModel.some_method"
-  # rake "some:great:rake:task"
-  rake "data:vnnet"
-  # p "Hello"
-  # command "echo 'Hello every gay'"
-end
+# every 1.minutes do
+#   # command "/usr/bin/some_great_command"
+#   # runner "MyModel.some_method"
+#   # rake "some:great:rake:task"
+#   rake "data:crawler"
+#   # p "Hello"
+#   # command "echo 'Hello every gay'"
+# end

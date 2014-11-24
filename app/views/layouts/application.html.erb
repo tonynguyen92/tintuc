@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Baomoi</title>
+<title>Bao Moi</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="main">
+    
+    <header>
+    <div id="logo" class="logo">
+       <%= link_to image_tag("baomoi.png"), "/"%>
+    </div>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-<%= yield %>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+            <%= link_to "Giao Duc","/?category=Giao Duc" %>
+            </li>
+            <li><%= link_to "Chinh Tri","/?category=Chinh Tri" %></li>
+            <li><%= link_to "Kinh Te","/?category=Kinh Te" %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+
+    <section>
+    	<%= yield %>
+    </section>  
+
+
+    </div>
 
 </body>
+
 </html>

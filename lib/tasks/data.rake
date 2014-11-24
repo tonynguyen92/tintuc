@@ -1,6 +1,6 @@
 namespace :data do
   desc "TODO"
-  task vnnet: :environment do
+  task crawler: :environment do
   	Api::Vnnet.crawling 
   end
 
