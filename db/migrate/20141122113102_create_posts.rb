@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :desc
       t.text :content
       t.references :category , index: true 
+      t.references :tobao , index: true 
       t.timestamps
     end
   end
