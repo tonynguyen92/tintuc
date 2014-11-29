@@ -34,4 +34,30 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  config.model 'User' do
+    visible true
+    # configure :sale_reports, :has_many_association
+    list do
+      field :email do
+        column_width 200
+      end
+      field :sign_in_count do
+        column_width 200
+      end
+      field :last_sign_in_at do
+        column_width 200
+      end
+      field :last_sign_in_ip do
+        column_width 200
+      end
+      #field :sale
+    end
+    show do
+    end
+    edit do
+      field :email do
+         column_width 200
+      end
+    end
+  end
 end

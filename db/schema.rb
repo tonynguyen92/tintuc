@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141124003922) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "image"
-    t.string   "desc"
+    t.text     "desc"
     t.text     "content"
     t.integer  "category_id"
     t.integer  "tobao_id"

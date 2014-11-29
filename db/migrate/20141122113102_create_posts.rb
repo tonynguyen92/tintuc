@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.string :image
-      t.string :desc
+      t.text :desc
       t.text :content
       t.references :category , index: true 
       t.references :tobao , index: true 
