@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :post
+  resources :post do
+    collection do
+      get 'getdata'
+    end
+  end
+  namespace :api do
+    get 'getdata'
+  end
   root 'post#index'
   get 'user/taotaikhoan'
   # Example of regular route:

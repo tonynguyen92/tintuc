@@ -1,16 +1,19 @@
-<div class="row">
-<% @posts.each do |post| %>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <h3><%= post.title %></h3>
-        <img src=<%=post.image %>>
-        <p><%= truncate(post.desc, length: 300) %></p><br>
-        <p><%= link_to 'Read More', post, :class=>"btn btn-primary" %></p>
-      </div>
-    </div>
- </div>
-<% end %>
+<div class="getdata" style="margin-bottom:30px;">
+<%= link_to "Link Api",api_getdata_path,:class => "btn btn-info",:style => "color:white;" %>
 </div>
-    
+<div class="row">
+	<% @posts.each do |post| %>
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<div class="caption">
+				<h3><%= post.title %></h3>
+				<img src=<%=post.image %>>
+				<p><%= truncate(post.desc, length: 300) %></p><br>
+				<p><%= link_to 'Read More', post, :class=>"btn btn-primary" %></p>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
 <div style="clear: both;"></div>
