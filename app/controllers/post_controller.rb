@@ -1,19 +1,20 @@
 class PostController < ApplicationController
 	def taotaikhoan
-     u = User.where(:email => "tony@vinova.sg").first || User.new
-      u.email = "tony@gmail.com"
-      u.password = "12345678"
-      u.save
+   u = User.where(:email => "tony@vinova.sg").first || User.new
+   u.email = "tony@gmail.com"
+   u.password = "12345678"
+   u.save
+ end
+ def getdata
+  Api::Vnnet.crawling
+end
+
+def index
+  @posts = Post.all.order(id: :desc)
+  if params[:category].present?
+    @posts = Post.where(category_id: Category.where(name: params[:category]) ).order(id: :desc )
   end
-  def getdata
-    Api::Vnnet.crawling
-  end
-  def index
-    @posts = Post.all
-    if params[:category].present?
-      @posts = Post.where(category_id: Category.where(name: params[:category]) )
-    end
-    respond_to do |format|
+  respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
