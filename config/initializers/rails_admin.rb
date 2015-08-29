@@ -34,6 +34,27 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  config.model 'Post' do
+    list do
+      field :title do
+      end
+      field :desc do
+      end
+      field :created_at do
+      end
+    end
+    edit do
+        field :title do
+      end
+       field :desc do
+      end
+       field :content do
+      end
+      field :tobao do
+
+      end
+    end
+  end
   config.model 'User' do
     visible true
     # configure :sale_reports, :has_many_association
@@ -56,8 +77,8 @@ RailsAdmin.config do |config|
     end
     edit do
       field :email do
-         column_width 200
-      end
-    end
-  end
+       column_width 200
+     end
+   end
+ end
 end

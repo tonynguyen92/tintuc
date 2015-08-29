@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get 'getdata'
     end
+    collection {post :search, to: 'post#index'}
   end
   namespace :api do
     get 'getdata'

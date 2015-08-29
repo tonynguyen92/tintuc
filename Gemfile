@@ -43,3 +43,5 @@ gem 'rails_admin'
 gem 'nokogiri'
 gem 'whenever', :require => false
 gem 'rufus-scheduler'
+gem 'simple_form'
+gem 'ransack'

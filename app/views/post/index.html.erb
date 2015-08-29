@@ -1,6 +1,11 @@
 <div class="getdata" style="margin-bottom:30px;">
 <%= link_to "Link Api",api_getdata_path,:class => "btn btn-info",:style => "color:white;" %>
 </div>
+<%= search_form_for @search, url: search_post_index_path, method: :post do |f| %>
+<%= f.label :title_cont, "Title" %>
+<%= f.text_field :title_cont %>
+ <div class="actions"> <%= f.submit "search" %></div>
+ <% end %>
 <div class="row">
 	<% @posts.each do |post| %>
 	<div class="col-sm-6 col-md-4">

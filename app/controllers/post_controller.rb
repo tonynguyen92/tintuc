@@ -8,13 +8,14 @@ class PostController < ApplicationController
  def getdata
   Api::Vnnet.crawling
 end
-
 def index
-  @posts = Post.all.order(id: :desc)
-  if params[:category].present?
-    @posts = Post.where(category_id: Category.where(name: params[:category]) ).order(id: :desc )
-  end
-  respond_to do |format|
+    # @q = Post.search(params[:q])
+    @search = Post.search(params[:q])
+    @posts = @search.result
+    if params[:category].present?
+      @posts = Post.where(category_id: Category.where(name: params[:category]) ).order(id: :desc )
+    end
+    respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
@@ -24,7 +25,6 @@ def index
   # GET /articles/1.json
   def show
     @post = Post.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
