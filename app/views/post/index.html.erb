@@ -14,6 +14,7 @@
 				<h3><%= post.title %></h3>
 				<img src=<%=post.image %>>
 				<p><%= truncate(post.desc, length: 300) %></p><br>
+				<p> <i> ( Nguồn <%= post.tobao.name %>)</i></p>
 				<p><%= link_to 'Read More', post, :class=>"btn btn-primary" %></p>
 			</div>
 		</div>
